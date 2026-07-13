@@ -1,0 +1,106 @@
+{
+  "title": "First Customer Finder",
+  "product": "Example Studio",
+  "product_url": "https://example.com",
+  "target_customer": "Independent gym owners",
+  "search_scope": "Public English-language sources, last 12 months",
+  "generated_at": "2026-07-12",
+  "verdict": "The strongest early demand comes from owners manually chasing failed membership payments and asking peers how to handle them.",
+  "prospects": [
+    {
+      "name": "Riverside Fitness (example)",
+      "type": "Company",
+      "stage": "High intent",
+      "score": 90,
+      "pain_signal": "The owner publicly described manually following up on overdue memberships and asked how other owners handle the same workflow.",
+      "evidence": "A recent public forum thread shows the owner describing the manual reminder cadence, the time cost, and asking for alternatives.",
+      "why_fit": "The product automates the exact reminder and payment step the owner is doing by hand.",
+      "why_now": "The thread is recent and the owner is actively asking for a better approach.",
+      "source_title": "How do you handle failed payments? (example)",
+      "source_url": "https://example.com/forum/thread-1",
+      "source_type": "Public forum",
+      "signal_date": "2026-07-01",
+      "suggested_channel": "Reply to the public discussion",
+      "opener": "Saw your question about failed-payment follow-up. The manual chase is exactly what we automated for a couple of small gyms. Mind if I share the one-line version?",
+      "caution": "Confirm the workflow is still active before pitching.",
+      "dimensions": {
+        "pain_strength": 5,
+        "product_fit": 5,
+        "timing": 4,
+        "reachability": 4,
+        "evidence_quality": 4
+      }
+    },
+    {
+      "name": "Corner Gym (example)",
+      "type": "Company",
+      "stage": "Problem aware",
+      "score": 73,
+      "pain_signal": "The owner posted about spending hours each month reconciling failed card retries against a spreadsheet.",
+      "evidence": "A public post describes the spreadsheet workaround and the monthly time cost without naming a tool.",
+      "why_fit": "The product replaces the spreadsheet reconciliation step with automatic retry and reporting.",
+      "why_now": "The post is a few months old, so freshness is lower, but the workaround is ongoing.",
+      "source_title": "Monthly failed-payment reconciliation (example)",
+      "source_url": "https://example.com/forum/thread-2",
+      "source_type": "Public forum",
+      "signal_date": "2026-04-18",
+      "suggested_channel": "Reply to the public discussion",
+      "opener": "Your spreadsheet-reconciliation process sounded familiar. We replaced that exact step for two gyms. Worth a quick look?",
+      "caution": "Verify the owner is still at the same gym before outreach.",
+      "dimensions": {
+        "pain_strength": 4,
+        "product_fit": 4,
+        "timing": 3,
+        "reachability": 4,
+        "evidence_quality": 3
+      }
+    },
+    {
+      "name": "Northgate Fitness (example)",
+      "type": "Company",
+      "stage": "Trigger present",
+      "score": 65,
+      "pain_signal": "The gym publicly announced a billing-system migration and asked members for patience during the transition.",
+      "evidence": "A public announcement describes an in-progress billing migration and asks for patience, implying a current gap.",
+      "why_fit": "The product can run alongside the migration as a fallback for failed payments during the cutover.",
+      "why_now": "The migration is in progress, so the timing trigger is live but the buyer is busy.",
+      "source_title": "Billing migration update (example)",
+      "source_url": "https://example.com/news/billing-migration",
+      "source_type": "Company page",
+      "signal_date": "2026-06-20",
+      "suggested_channel": "Public contact form or reply on the announcement",
+      "opener": "Noticed your billing migration note. During cutovers, failed retries usually spike. We built a fallback that catches them. Useful as a safety net for the next few weeks?",
+      "caution": "Approach as a safety net, not a replacement, during their migration.",
+      "dimensions": {
+        "pain_strength": 3,
+        "product_fit": 4,
+        "timing": 3,
+        "reachability": 3,
+        "evidence_quality": 3
+      }
+    }
+  ],
+  "patterns": [
+    {
+      "title": "Manual follow-up",
+      "count": 2,
+      "insight": "Owners rely on spreadsheets and messaging apps after payments fail."
+    },
+    {
+      "title": "Cutover vulnerability",
+      "count": 1,
+      "insight": "Billing migrations create a temporary window where failed retries go unhandled."
+    }
+  ],
+  "outreach_plan": {
+    "angle": "Offer a manual concierge test before asking for software adoption.",
+    "first_step": "Contact the three highest-scoring prospects with one source-based question.",
+    "follow_up": "Share a two-minute mockup only after they confirm the pain.",
+    "success": "Three conversations and one design-partner commitment within seven days."
+  },
+  "limits": [
+    "These are potential customers inferred from public signals, not confirmed buyers.",
+    "Verify current relevance before any outreach and keep contact manual.",
+    "Source URLs are example placeholders in this fixture."
+  ]
+}
