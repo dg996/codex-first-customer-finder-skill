@@ -13,7 +13,6 @@ It defines the ideal customer profile, researches public sources, links the evid
 - Links every primary prospect to the original public source
 - Drafts respectful, source-based outreach openers
 - Creates a responsive standalone HTML report
-- Exports prospects to CSV and JSON straight from the report
 - Keeps all outreach manual by default
 - Avoids private contact enrichment and sensitive personal data
 
@@ -67,28 +66,6 @@ The report includes:
 10. Research limitations
 
 Prospects are hypotheses based on public signals, not confirmed customers or guaranteed buyers.
-
-## Export
-
-Every generated report embeds the full report JSON as `<script type="application/json" id="prospect-data">`, so external tooling can read it without re-running research. Three buttons in the report header work entirely client-side, with no network calls:
-
-- **Export CSV** — one row per prospect with name, stage, score, source URL, opener, and the five dimension scores. Drop straight into a spreadsheet or CRM.
-- **Export JSON** — the full report as a pretty-printed JSON file.
-- **Copy summary** — a plain-text block (product, verdict, top three prospects by score with source URL and opener, and the limits) for pasting into Slack or a doc.
-
-Outreach is never sent automatically. The buttons only move data that is already in the report.
-
-## Tests
-
-The generator and the report JSON contract have a self-contained test suite using only the Python standard library:
-
-```bash
-python3 first-customer-finder/scripts/test_generate_report.py
-```
-
-It validates the example fixture at `first-customer-finder/examples/analysis.example.json` against the JSON schema at `first-customer-finder/references/report.schema.json`, checks that every prospect score matches the scoring formula in `research-framework.md`, and confirms the generator output matches the golden HTML snapshot at `first-customer-finder/examples/first-customer-finder-report.golden.html`. Run it after any change to the generator or schema.
-
-If the optional `jsonschema` package is installed, the schema validation check runs; otherwise it self-skips.
 
 ## Modes
 

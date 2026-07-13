@@ -10,20 +10,6 @@ python3 scripts/generate_report.py analysis.json outputs/first-customer-finder-r
 
 Return a clickable absolute file link in Codex. Keep the JSON in a work or temporary directory unless the user asks for raw data.
 
-The JSON shape is formally defined in `references/report.schema.json` (JSON Schema draft-07). A complete worked example lives at `examples/analysis.example.json`, and a rendered snapshot at `examples/first-customer-finder-report.golden.html`. Run `python3 scripts/test_generate_report.py` to verify the generator still matches that snapshot.
-
-## Export
-
-The generated report is self-contained and portable. The full report JSON is also embedded in the HTML as `<script type="application/json" id="prospect-data">`, so external tooling can read it without re-running research.
-
-Three buttons in the report header work entirely client-side, with no network calls:
-
-- **Export CSV** — downloads `first-customer-finder-prospects.csv` with one row per prospect (name, type, stage, score, pain signal, why fit, why now, source title, source URL, source type, signal date, suggested channel, opener, caution, and the five dimension scores).
-- **Export JSON** — downloads the full report as `first-customer-finder-report.json` (pretty-printed).
-- **Copy summary** — copies a plain-text block to the clipboard: product, verdict, the top three prospects by score with their source URL and opener, and the limits. Useful for pasting into a Slack thread or doc.
-
-Outreach is never sent automatically. The buttons only move data that is already in the report.
-
 ## JSON schema
 
 ```json
